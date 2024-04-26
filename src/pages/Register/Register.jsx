@@ -22,8 +22,8 @@ const Register = () => {
         const form = new FormData(e.currentTarget);
 
         const name = form.get('name')
-        const photoURL = form.get('photoURL')
         const email = form.get('email')
+        const photoURL = form.get('photoURL')
         const password = form.get('password')
 
         const accepted = form.get('terms')
@@ -124,16 +124,16 @@ const Register = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">PhotoURL</span>
+                                    <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" name="photoURL" placeholder="photoURL" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text">PhotoURL</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                <input type="text" name="photoURL" placeholder="photoURL" className="input input-bordered" required />
                             </div>
 
 

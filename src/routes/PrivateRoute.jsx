@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
 
     if (loading) {
-        return <div className="text-info flex items-center">
+        return <div className="text-secondary flex items-center">
                     <span className="loading loading-bars loading-xs"></span>
                     <span className="loading loading-bars loading-sm"></span>
                     <span className="loading loading-bars loading-md"></span>
