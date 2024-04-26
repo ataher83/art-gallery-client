@@ -3,8 +3,7 @@ import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword,
 import app from "../firebase/firebase.config";
 
 
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+
 // import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
