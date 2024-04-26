@@ -137,14 +137,14 @@ const Login = () => {
                     </div>
 
 
-                    <div className="text-center mt-5">
+                    {/* <div className="text-center mt-5">
                         {
                             regError && <p className="text-red-600">{regError}</p>
                         }
                         {
                             success && <p className="text-green-500">{success}</p>
                         }
-                    </div>
+                    </div> */}
 
                     
 

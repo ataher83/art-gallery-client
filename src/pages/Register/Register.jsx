@@ -171,14 +171,14 @@ const Register = () => {
 
                         </form>
 
-                        <div className="text-center -mt-5">
+                        {/* <div className="text-center -mt-5">
                             {
                                 regError && <p className="text-red-600">{regError}</p>
                             }
                             {
                                 success && <p className="text-green-500">{success}</p>
                             }
-                        </div>
+                        </div> */}
 
                         <p className="text-center text-lg py-4">Already have an account? <Link className="text-green-600 font-bold" to="/login">Login</Link></p>
 

@@ -15,8 +15,6 @@ const PrivateRoute = ({children}) => {
                     <span className="loading loading-bars loading-lg"></span>
                 </div>
         
-        
-        
     }
 
     if (user) {
