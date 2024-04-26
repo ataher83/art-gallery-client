@@ -94,7 +94,7 @@ const Login = () => {
     return (
       <div>
         <Helmet>
-            <title>The-Homes | Login</title>
+            <title>The Art Gallery | Login</title>
         </Helmet>
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col w-3/4 lg:w-1/2">

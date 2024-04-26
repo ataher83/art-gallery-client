@@ -39,7 +39,7 @@ const Footer = () => {
             </nav>
         </footer>
     
-        <p className="text-sm font-semibold bg-base-300 text-center">Copyright © 2024 - All right reserved by The Art Gallery</p>
+        <p className="text-sm font-semibold bg-base-300 text-center pb-5">Copyright © 2024 - All right reserved by The Art Gallery</p>
         
       </div>
     );
