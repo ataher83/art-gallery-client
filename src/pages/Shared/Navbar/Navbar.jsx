@@ -18,8 +18,8 @@ const Navbar = () => {
     <li><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
     <li><NavLink to="/myArtAndCraftList">My Art & Craft List</NavLink></li>
     <li><NavLink to="/blogs">Blogs</NavLink></li>
-    <li><NavLink to="/login">Login</NavLink></li>
-    <li><NavLink to="/register">Register</NavLink></li>
+    {/* <li><NavLink to="/login">Login</NavLink></li> */}
+    {/* <li><NavLink to="/register">Register</NavLink></li> */}
 </>
 
     return (
@@ -48,10 +48,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user?
-                        // <div className="tooltip" data-tip="user name">
-                        //user.email
                         <div >
-                            {/* <span>{user.displayName}</span> */}
                             <span>{user.email}</span>
                             <div className="flex gap-3">
                                 
@@ -72,7 +69,7 @@ const Navbar = () => {
                         
                         :
                         <Link to="/login">
-                        <button className="btn">Login</button>
+                        <button className="btn">Login / Register</button>
                         </Link>
                 }
             </div>

@@ -1,9 +1,13 @@
-import { Helmet } from "react-helmet-async";
-import Swal from 'sweetalert2'
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const AddCraftItem = () => {
-    const handleAddCraftItem = event => {
+const UpdateCraft = () => {
+
+    const craft = useLoaderData();
+    const { _id, image, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, userEmail, userName  } = craft;
+
+    const handleUpdateCraft = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -20,43 +24,37 @@ const AddCraftItem = () => {
         const userEmail = form.userEmail.value;
         const userName = form.userName.value;
 
-        const newCraft = { image, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, userEmail, userName  }
+        const updatedCraft = { image, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, userEmail, userName  }
 
-        console.log(newCraft);
+        console.log(updatedCraft);
 
         // send data to the server
-        fetch('http://localhost:5000/craft', {
-            method: 'POST',
+        fetch(`http://localhost:5000/craft/${_id}`, {
+            method: 'PUT',
+            
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newCraft)
+            body: JSON.stringify(updatedCraft)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Craft Added Successfully',
+                        text: 'Craft Updated Successfully',
                         icon: 'success',
                         confirmButtonText: 'Close'
-                      })
-                      
+                    })
                 }
             })
     }
 
-
     return (
-        <div>
-            <Helmet>
-                <title>The Art Gallery | Add Craft Item</title>
-            </Helmet>
-            
-            <div className="bg-[#F4F3F0] p-24">
-                <h2 className="text-3xl font-extrabold">Add a Craft Item</h2>
-                <form onSubmit={handleAddCraftItem}>
+        <div className="bg-[#F4F3F0] p-24">
+            <h2 className="text-3xl font-extrabold">Update Craft: {itemName}</h2>
+            <form onSubmit={handleUpdateCraft}>
 
                     {/*  Photo url */}
                     <div className="mb-8">
@@ -175,12 +173,14 @@ const AddCraftItem = () => {
                         </div>
                     </div>
 
-                    <input type="submit" value="Add" className="btn btn-block" />
 
-                </form>
-            </div>
+                <input type="submit" value="Update" className="btn btn-block" />
+
+            </form>
         </div>
     );
+
+    
 };
 
-export default AddCraftItem;
+export default UpdateCraft;

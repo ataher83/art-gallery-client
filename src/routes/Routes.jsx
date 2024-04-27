@@ -8,6 +8,8 @@ import MyArtAndCraftList from "../pages/MyArtAndCraftList/MyArtAndCraftList";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
+import Users from "../pages/Users/Users";
 
 
   const router = createBrowserRouter([
@@ -18,7 +20,9 @@ import PrivateRoute from "./PrivateRoute";
       children: [
         {
             path:'/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: () => fetch('http://localhost:5000/craft')
+        
         },
         {
             path:'/allArtAndCraftItems',
@@ -27,6 +31,11 @@ import PrivateRoute from "./PrivateRoute";
         {
             path:'/addCraftItem',
             element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
+        },
+        {
+            path:'/updateCraft/:id',
+            element: <UpdateCraft></UpdateCraft>,
+            loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
         },
         {
             path:'/myArtAndCraftList',
@@ -40,6 +49,12 @@ import PrivateRoute from "./PrivateRoute";
             path:'/register',
             element: <Register></Register>
         },
+        {
+            path:'/users',
+            element: <Users></Users>,
+            loader: () => fetch('http://localhost:5000/user')
+        }
+
       ]
     },
   ]);

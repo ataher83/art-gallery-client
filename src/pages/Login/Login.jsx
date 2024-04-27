@@ -9,9 +9,6 @@ import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const {  signIn,  googleSignIn, githubSignIn, 
-        // handleGithubSignIn,
-        // regError,
-        // success
     } = useContext(AuthContext);
 
     const [regError, setRegError] = useState(''); 
@@ -46,6 +43,26 @@ const Login = () => {
 
                 //navigate after login
                 navigate(location?.state?  location.state : '/');
+
+
+
+
+                const user = {
+                    email,
+                    lastLoggedAt: result.user?.metadata?.lastSignInTime
+                }
+                // update last logged at in the database 
+                fetch('http://localhost:5000/user', {
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data) 
+                    })
             })
             .catch(error => {
                 console.error(error);

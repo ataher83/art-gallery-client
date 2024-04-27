@@ -23,9 +23,9 @@ const Banner = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
-        <SwiperSlide><img className='w-full h-96' src="https://i.ibb.co/Sdby4VT/9.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img className='w-full h-96' src="https://i.ibb.co/YZ05XYV/6.webp" alt="" /></SwiperSlide>
-        <SwiperSlide><img className='w-full h-96' src="https://i.ibb.co/XbG5qCJ/1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-96' src="https://i.postimg.cc/gw9rsMMC/Landscape-Painting-Mountain-view-canvas-Forest-based-Landscape-1.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-96' src="https://i.postimg.cc/v1dHf4TM/Watercolour-Painting-Floral-Watercolor-Art-Animal-Watercolor-Portrait.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-96' src="https://i.postimg.cc/1VzzXbtq/Oil-Painting-Realistic-Oil-Portrait-Abstract-Oil-Painting.webp" alt="" /></SwiperSlide>
         </Swiper>
       </div>
     );

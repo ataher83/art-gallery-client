@@ -64,6 +64,24 @@ const Register = () => {
                 console.log(result.user) 
                 setSuccess('User Created Successfully.')
                 toast.success('User Created Successfully.');
+                //new user has been create
+
+                const createdAt = result.user?.metadata?.creationTime;
+                const user = { email, createdAt: createdAt }; 
+                fetch('http://localhost:5000/user', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            console.log('user added to the database') 
+                        }  
+                    })
+
 
 
                 // update profile 
@@ -76,26 +94,15 @@ const Register = () => {
                 .catch() 
 
                 return logOut();
+                
 
             })
             .catch(error => {
                 console.error(error)
                 setRegError(error.message);
                 toast.error(error.message);
-            })
-
-
-            // return logOut();
-
-    
+            })   
     }
-
-
-    // const handleSignOut = () => {
-    //     logOut()
-    //         .then()
-    //         .catch() 
-    // }
 
 
     return (
@@ -185,8 +192,6 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <ToastContainer /> */}
 
       </div>
     );
