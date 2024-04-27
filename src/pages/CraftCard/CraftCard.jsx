@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
+import { ImLocation2 } from "react-icons/im";
+import { TfiRulerAlt2 } from "react-icons/tfi";
+import { IoLogoUsd } from "react-icons/io";
+import { FcRating } from "react-icons/fc";
+
 const CraftCard = ({ craft, crafts, setCrafts }) => {
 
     const { _id, image, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, userEmail, userName  } = craft;
@@ -42,6 +47,68 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
     }
 
     return (
+    <div>
+    
+        <div className="card bg-base-100 shadow-xl mt-4">
+
+                <figure><img className="w-full h-72" src={image} alt="Craft Image" />
+                </figure>
+
+                <div className="flex justify-between px-2 pt-1 font-semibold">
+                    <p className="flex items-center"><FcRating className="text-blue-400" /> {rating}</p>
+                    <p className="flex items-center"><IoLogoUsd className="text-blue-400" /> {price}</p>
+                    <p className="bg-orange-400 rounded  capitalize px-1"><span >{stockStatus}</span></p>
+                </div>
+
+                <div className="card-body px-1">
+                    <div className="flex gap-2 items-center justify-center">
+                        {/* <div className="avatar pt-2">
+                            <div className="w-4 rounded-full ring ring-info ring-offset-base-100 ring-offset-2">
+                                <p className="text-center font-semibold -mt-1 ">{_id}</p>
+                            </div>
+                        </div> */}
+                        <h2 className=" lg:card-title text-center text-orange-600">
+                            {itemName}
+                            {/* <div className="badge badge-secondary">{segment_name}</div> */}
+                        </h2>
+                    </div>
+                        
+                    {/* <p className="flex items-center font-normal text-blue-500 pb-2"><ImLocation2 className="text-blue-400" />{location}</p> */}
+                    <p className="text-center font-normal text-orange-400 pb-2">{subcategoryName}</p>
+                        
+                    <p className="text-center pb-2">{shortDescription}</p>
+
+                    {/* <p className="text-center font-semibold ">Facilities:</p> */}
+                    <div className="card-actions justify-center items-center">
+                        <div className="badge badge-outline bg-blue-400 font-semibold text-white border-blue-500">Customization: {customization}</div> 
+                        <div className="badge badge-outline  bg-blue-400 font-semibold text-white border-blue-500">ProcessingTime: {processingTime}</div> 
+                    </div>
+                    <div className="card-actions justify-center items-center">
+                        <div className="badge badge-outline  bg-blue-400 font-semibold text-white border-blue-500">Email: {userEmail}</div> 
+                        <div className="badge badge-outline  bg-blue-400 font-semibold text-white border-blue-500">Name: {userName}</div> 
+                    </div>
+
+                    {/* <div className="text-center mt-5">
+                        <Link to={`/estateDetails/${id}`}><button className="btn btn-info w-1/3 ">View Property</button></Link>
+                    </div> */}
+                    
+
+                </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="card card-side bg-base-100 shadow-xl">
 
             <figure><img src={image} alt="Movie" /></figure>
@@ -60,6 +127,11 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
                     <p>{userName}</p>
                 </div>
                 
+
+
+
+
+
                 <div className=" card-actions justify-end">
                     <div className="btn-group btn-group-vertical space-y-2 flex flex-col">
                         <button className="btn">View</button>
@@ -73,6 +145,10 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
                 </div>
             </div>
         </div>
+
+
+    </div>
+
     );
 };
 

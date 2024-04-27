@@ -18,17 +18,20 @@ const Home = () => {
                 <title>The Art Gallery | Home</title>
             </Helmet>
             <Banner></Banner>
-
-            <h1 className="text-6xl text-purple-600">Total Craft items: {crafts.length}</h1>
-            <div className="grid md:grid-cols-2 gap-5">
-                {
-                    crafts.map(craft => <CraftCard
-                    key={craft._id}
-                    craft={craft}
-                    crafts={crafts}
-                    setCrafts={setCrafts}
-                    ></CraftCard>)
-                }
+            <div className="py-16">
+            <p className="text-center text-3xl font-semibold  text-purple-600 ">CRAFT ITEMS</p>
+            <p className="text-center text-lg     "> Explore the Craft Items Collection, find exclusive something...</p>
+                
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {
+                        crafts.map(craft => <CraftCard
+                        key={craft._id}
+                        craft={craft}
+                        crafts={crafts}
+                        setCrafts={setCrafts}
+                        ></CraftCard>)
+                    }
+                </div>
             </div>
 
         </div>
