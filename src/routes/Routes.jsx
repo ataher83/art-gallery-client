@@ -21,7 +21,7 @@ import Users from "../pages/Users/Users";
         {
             path:'/',
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/craft')
+            loader: () => fetch('https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft')
         
         },
         {
@@ -35,7 +35,7 @@ import Users from "../pages/Users/Users";
         {
             path:'/updateCraft/:id',
             element: <UpdateCraft></UpdateCraft>,
-            loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+            loader: ({params}) => fetch(`https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft/${params.id}`)
         },
         {
             path:'/myArtAndCraftList',
@@ -52,7 +52,7 @@ import Users from "../pages/Users/Users";
         {
             path:'/users',
             element: <Users></Users>,
-            loader: () => fetch('http://localhost:5000/user')
+            loader: () => fetch('https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/user')
         }
 
       ]

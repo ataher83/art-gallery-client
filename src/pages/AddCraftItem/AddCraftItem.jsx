@@ -25,7 +25,7 @@ const AddCraftItem = () => {
         console.log(newCraft);
 
         // send data to the server
-        fetch('http://localhost:5000/craft', {
+        fetch('https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

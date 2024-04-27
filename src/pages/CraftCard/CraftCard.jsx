@@ -25,7 +25,7 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/craft/${_id}`, {
+                fetch(`https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
