@@ -27,7 +27,8 @@ import CraftDetails from "../pages/CraftDetails/CraftDetails";
         },
         {
             path:'/allArtAndCraftItems',
-            element: <AllArtAndCraftItems></AllArtAndCraftItems>
+            element: <AllArtAndCraftItems></AllArtAndCraftItems>,
+            loader: () => fetch('https://art-gallery-server-one.vercel.app/craft')
         },
         {
             path:'/addCraftItem',

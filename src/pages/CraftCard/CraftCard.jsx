@@ -59,23 +59,19 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
 
                 <div className="card-body px-1">
                     <div className="flex gap-2 items-center justify-center">
-                        {/* <div className="avatar pt-2">
-                            <div className="w-4 rounded-full ring ring-info ring-offset-base-100 ring-offset-2">
-                                <p className="text-center font-semibold -mt-1 ">{_id}</p>
-                            </div>
-                        </div> */}
+                        
                         <h2 className=" lg:card-title text-center text-orange-600">
                             {itemName}
-                            {/* <div className="badge badge-secondary">{segment_name}</div> */}
+                           
                         </h2>
                     </div>
                         
-                    {/* <p className="flex items-center font-normal text-blue-500 pb-2"><ImLocation2 className="text-blue-400" />{location}</p> */}
+                    
                     <p className="text-center font-normal text-orange-400 pb-2">{subcategoryName}</p>
                         
                     <p className="text-center pb-2">{shortDescription}</p>
 
-                    {/* <p className="text-center font-semibold ">Facilities:</p> */}
+                   
                     <div className="card-actions justify-center items-center">
                         <div className="badge badge-outline bg-blue-400 font-semibold text-white border-blue-500">Customization: {customization}</div> 
                         <div className="badge badge-outline  bg-blue-400 font-semibold text-white border-blue-500">ProcessingTime: {processingTime}</div> 
