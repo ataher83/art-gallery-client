@@ -22,18 +22,18 @@ const AllArtAndCraftItems = () => {
 
 
             <div className="overflow-x-auto">
+
                 <table className="table">
 
                     {
                         crafts.map(craft => 
                             <div>
-
                                 <tbody>
                                     <tr>
                                         <td>
-                                        <div className="flex items-center gap-3">
+                                        <div className="md:flex items-center gap-3">
                                             <div className="avatar">
-                                            <div className="rounded-md w-32 h-auto">
+                                            <div className="rounded-md w-20 lg:w-72 lg:h-40">
                                                 <img src={craft.image} alt="Craft Image" />
                                             </div>
                                             </div>
