@@ -63,7 +63,7 @@ useEffect(()=>{
                                 <th>Email</th>
                                 <th>Created At</th>
                                 <th>Last Logged In</th>
-                                <th>Action</th>
+                                {/* <th>Action</th> */}
                             </tr>
                             </thead>
         
@@ -139,12 +139,6 @@ useEffect(()=>{
                                         <div className="badge badge-outline  bg-blue-400 font-semibold text-white border-blue-500">Name: {craft.userName}</div> 
                                     </div>
 
-
-
-
-                                    {/* <div className="text-center mt-5">
-                                        <Link to={`/craftDetails/${_id}`}><button className="btn btn-secondary w-1/3 ">View Details</button></Link>
-                                    </div> */}
                                     
 
                                 </div>
