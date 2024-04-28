@@ -4,6 +4,9 @@ import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom"
 import { useState } from "react"
 import CraftCard from "../CraftCard/CraftCard";
+import OurArtist from "../OurArtist/OurArtist";
+import LocationMap from "../LocationMap/LocationMap";
+
 
 
 const Home = () => {
@@ -33,6 +36,10 @@ const Home = () => {
                     }
                 </div>
             </div>
+
+            <OurArtist></OurArtist>
+            <LocationMap></LocationMap>
+            
 
         </div>
     );
