@@ -63,7 +63,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Image</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-full" />
+                                <input type="text" name="image" defaultValue={image} placeholder="Image URL" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Item Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="itemName" placeholder="Item Name" className="input input-bordered w-full" />
+                                <input type="text" name="itemName" defaultValue={itemName} placeholder="Item Name" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -84,7 +84,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Subcategory Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="subcategoryName" placeholder="Subcategory Name" className="input input-bordered w-full" />
+                                <input type="text" name="subcategoryName" defaultValue={subcategoryName} placeholder="Subcategory Name" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Short Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="shortDescription" placeholder="Short Description" className="input input-bordered w-full" />
+                                <input type="text" name="shortDescription" defaultValue={shortDescription} placeholder="Short Description" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -105,7 +105,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Price</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
+                                <input type="text" name="price" defaultValue={price} placeholder="Price" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Rating</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-full" />
+                                <input type="text" name="rating" defaultValue={rating} placeholder="Rating" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -126,7 +126,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Customization</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="customization" placeholder="example- yes/ no" className="input input-bordered w-full" />
+                                <input type="text" name="customization" defaultValue={customization} placeholder="example- yes/ no" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -138,7 +138,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Processing Time</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="processingTime" placeholder="Processing Time" className="input input-bordered w-full" />
+                                <input type="text" name="processingTime" defaultValue={processingTime} placeholder="Processing Time" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -147,7 +147,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">Stock Status</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="stockStatus" placeholder="example- In stock/ Made to Order" className="input input-bordered w-full" />
+                                <input type="text" name="stockStatus" defaultValue={stockStatus} placeholder="example- In stock/ Made to Order" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">User Email</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="userEmail" placeholder="User Email" className="input input-bordered w-full" />
+                                <input type="text" name="userEmail" defaultValue={userEmail} placeholder="User Email" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -168,7 +168,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">User Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="userName" placeholder="User Name" className="input input-bordered w-full" />
+                                <input type="text" name="userName" defaultValue={userName} placeholder="User Name" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
