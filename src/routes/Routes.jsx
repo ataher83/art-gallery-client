@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
 import Users from "../pages/Users/Users";
 import CraftDetails from "../pages/CraftDetails/CraftDetails";
+import ViewDetails from "./ViewDetails/ViewDetails";
 
 
   const router = createBrowserRouter([
@@ -63,6 +64,11 @@ import CraftDetails from "../pages/CraftDetails/CraftDetails";
             path:'/users',
             element: <Users></Users>,
             loader: () => fetch('https://art-gallery-server-one.vercel.app/user')
+        },
+        {
+            path:'/viewDetails',
+            element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>
+            
         }
 
       ]
