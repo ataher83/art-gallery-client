@@ -8,40 +8,40 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
     const { _id, image, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, userEmail, userName  } = craft;
 
 
-    const handleDelete = _id => {
-        console.log(_id);
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
+    // const handleDelete = _id => {
+    //     console.log(_id);
+    //     Swal.fire({
+    //         title: 'Are you sure?',
+    //         text: "You won't be able to revert this!",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Yes, delete it!'
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
 
 
-                fetch(`https://art-gallery-server-one.vercel.app/craft/${_id}`, {
-                    method: 'DELETE'
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your Craft has been deleted.',
-                                'success'
-                            )
-                            const remaining = crafts.filter(cof => cof._id !== _id);
-                            setCrafts(remaining);
-                        }
-                    })
+    //             fetch(`https://art-gallery-server-one.vercel.app/craft/${_id}`, {
+    //                 method: 'DELETE'
+    //             })
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     console.log(data);
+    //                     if (data.deletedCount > 0) {
+    //                         Swal.fire(
+    //                             'Deleted!',
+    //                             'Your Craft has been deleted.',
+    //                             'success'
+    //                         )
+    //                         const remaining = crafts.filter(cof => cof._id !== _id);
+    //                         setCrafts(remaining);
+    //                     }
+    //                 })
 
-            }
-        })
-    }
+    //         }
+    //     })
+    // }
 
     return (
     <div>
@@ -88,9 +88,6 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
 
                 </div>
         </div>
-
-
-
 
 
 
