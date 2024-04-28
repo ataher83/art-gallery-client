@@ -10,6 +10,7 @@ import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
 import Users from "../pages/Users/Users";
+import CraftDetails from "../pages/CraftDetails/CraftDetails";
 
 
   const router = createBrowserRouter([
@@ -21,7 +22,7 @@ import Users from "../pages/Users/Users";
         {
             path:'/',
             element: <Home></Home>,
-            loader: () => fetch('https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft')
+            loader: () => fetch('https://art-gallery-server-one.vercel.app/craft')
         
         },
         {
@@ -33,9 +34,17 @@ import Users from "../pages/Users/Users";
             element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
         },
         {
+            path:'/craftDetails/:id',
+            element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
+
+            // loader: ({params}) => fetch(`https://art-gallery-server-one.vercel.app/craft/${params.id}`)
+
+            loader: () => fetch('https://art-gallery-server-one.vercel.app/craft')
+        },
+        {
             path:'/updateCraft/:id',
             element: <UpdateCraft></UpdateCraft>,
-            loader: ({params}) => fetch(`https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft/${params.id}`)
+            loader: ({params}) => fetch(`https://art-gallery-server-one.vercel.app/craft/${params.id}`)
         },
         {
             path:'/myArtAndCraftList',
@@ -52,7 +61,7 @@ import Users from "../pages/Users/Users";
         {
             path:'/users',
             element: <Users></Users>,
-            loader: () => fetch('https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/user')
+            loader: () => fetch('https://art-gallery-server-one.vercel.app/user')
         }
 
       ]

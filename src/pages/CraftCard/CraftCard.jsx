@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-
-import { ImLocation2 } from "react-icons/im";
-import { TfiRulerAlt2 } from "react-icons/tfi";
 import { IoLogoUsd } from "react-icons/io";
 import { FcRating } from "react-icons/fc";
 
@@ -25,7 +22,7 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft/${_id}`, {
+                fetch(`https://art-gallery-server-one.vercel.app/craft/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -88,9 +85,9 @@ const CraftCard = ({ craft, crafts, setCrafts }) => {
                         <div className="badge badge-outline  bg-blue-400 font-semibold text-white border-blue-500">Name: {userName}</div> 
                     </div>
 
-                    {/* <div className="text-center mt-5">
-                        <Link to={`/estateDetails/${id}`}><button className="btn btn-info w-1/3 ">View Property</button></Link>
-                    </div> */}
+                    <div className="text-center mt-5">
+                        <Link to={`/craftDetails/${_id}`}><button className="btn btn-secondary w-1/3 ">View Details</button></Link>
+                    </div>
                     
 
                 </div>

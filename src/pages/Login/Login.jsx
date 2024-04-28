@@ -52,7 +52,7 @@ const Login = () => {
                     lastLoggedAt: result.user?.metadata?.lastSignInTime
                 }
                 // update last logged at in the database 
-                fetch('https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/user', {
+                fetch('https://art-gallery-server-one.vercel.app/user', {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json'

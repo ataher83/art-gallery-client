@@ -29,7 +29,7 @@ const UpdateCraft = () => {
         console.log(updatedCraft);
 
         // send data to the server
-        fetch(`https://art-gallery-server-9mxa94ffo-taers-projects.vercel.app/craft/${_id}`, {
+        fetch(`https://art-gallery-server-one.vercel.app/craft/${_id}`, {
             method: 'PUT',
             
             headers: {
