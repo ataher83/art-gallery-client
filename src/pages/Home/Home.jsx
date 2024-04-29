@@ -7,6 +7,8 @@ import CraftCard from "../CraftCard/CraftCard";
 import OurArtist from "../OurArtist/OurArtist";
 import LocationMap from "../LocationMap/LocationMap";
 
+import { Fade, Slide } from "react-awesome-reveal";
+
 
 
 const Home = () => {
@@ -22,8 +24,14 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <div className="py-16">
-            <p className="text-center text-3xl font-semibold  text-purple-600 ">Craft Items</p>
-            <p className="text-center text-lg     "> Explore the Craft Items Collection, find exclusive something...</p>
+                <p className="text-center text-3xl font-semibold  text-purple-600 ">
+                    <Slide>
+                        <h1>Craft Items</h1>
+                    </Slide>
+                </p>
+                <p className="text-center text-lg "> 
+                    <Fade delay={1e3} cascade damping={1e-1}> Explore the Craft Items Collection, find exclusive something... </Fade>
+                </p>
                 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5   container mx-auto">
                     {

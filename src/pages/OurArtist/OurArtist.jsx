@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const OurArtist = () => {
     return (
@@ -9,8 +10,13 @@ const OurArtist = () => {
             </Helmet>
 
             <div className="py-16 container mx-auto ">
-                <p className="text-center text-3xl font-semibold  text-purple-600   ">Our Artists</p>
-                <p className="text-center text-lg  ">Meet our professional Artists, who will help you find your dream... </p>
+                <p className="text-center text-3xl font-semibold  text-purple-600   ">
+                    <Slide>
+                        <h1>Our Artists</h1>
+                    </Slide></p>
+                    <p className="text-center text-lg "> 
+                        <Fade delay={1e3} cascade damping={1e-1}> Meet our professional Artists, who will help you find your dream... </Fade>
+                    </p>
                 
 
 

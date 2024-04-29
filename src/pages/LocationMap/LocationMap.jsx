@@ -1,12 +1,19 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
+import { Fade, Slide } from "react-awesome-reveal";
 
 
 const LocationMap = () => {
     return (
         <div className='container mx-auto pb-5' >
-            <h1 className='text-center text-3xl font-semibold  text-purple-600'>Find our Location</h1>
-            <p className="text-center text-lg  ">Find our location on the map that help you to explore us easily</p>
+            <p className='text-center text-3xl font-semibold  text-purple-600'>
+                <Slide>
+                    <h1>Find our Location</h1>
+                </Slide>
+            </p>
+            <p className="text-center text-lg "> 
+                    <Fade delay={1e3} cascade damping={1e-1}> Find our location on the map that help you to explore us easily </Fade>
+            </p>
             <MapContainer className='h-64 w-full'
              center={[23.793940095798103, 90.40495186121306]} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
