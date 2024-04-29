@@ -40,7 +40,7 @@ const Navbar = () => {
     }
 
     const navLinks = <>
-    <li><NavLink to="/">Home</NavLink></li>
+    <li ><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/allArtAndCraftItems">All Art & Craft Items</NavLink></li>
     <li><NavLink to="/addCraftItem">Add Craft Item</NavLink></li>
     <li><NavLink to="/myArtAndCraftList">My Art & Craft List</NavLink></li>
@@ -50,7 +50,7 @@ const Navbar = () => {
 </>
 
     return (
-        <div className="navbar bg-base-100 font-medium mt-5">
+        <div className="navbar bg-base-100 font-medium mt-5   container mx-auto">
 
             <div className="navbar-start">
                 <div className="dropdown">
@@ -63,7 +63,7 @@ const Navbar = () => {
 
                 </ul>
                 </div>
-                <a className="text-3xl font-bold " href="/">The Art Gallery</a>
+                <a className="text-3xl font-bold text-purple-600" href="/">The Art Gallery</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

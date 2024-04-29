@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-300 text-base-content">
             <aside>
                 <img src="https://i.postimg.cc/bNKHCYbH/logo-artgallery.jpg" alt="" />
-                <p><span className="text-2xl font-semibold">The Art Gallery</span><br/>Paint Your World with Excellence.</p>
+                <p className="font-semibold"><span className="text-2xl font-semibold text-purple-600">The Art Gallery</span><br/>Paint Your World with Excellence.</p>
             </aside> 
             <nav>
                 <h6 className="footer-title">Explore</h6> 

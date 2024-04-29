@@ -3,18 +3,18 @@ import { Helmet } from "react-helmet-async";
 
 const OurArtist = () => {
     return (
-        <div className="flex gap-5">
+        <div className="flex gap-5  container mx-auto">
             <Helmet>
                 <title>The Art Gallery | Our Artists</title>
             </Helmet>
 
-            <div className="py-16">
-                <p className="text-center text-3xl font-semibold   animate__animated animate__bounceInLeft">Our Artists</p>
-                <p className="text-center animate__animated animate__bounceIn ">Meet our professional Artists, who will help you find your dream </p>
+            <div className="py-16 container mx-auto ">
+                <p className="text-center text-3xl font-semibold  text-purple-600   ">Our Artists</p>
+                <p className="text-center text-lg  ">Meet our professional Artists, who will help you find your dream... </p>
                 
 
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10  pl-5 ">
 
                     <div className="card w-96 bg-base-100 shadow-xl card-body items-center text-center">
                         <div className="avatar  ">

@@ -22,10 +22,10 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <div className="py-16">
-            <p className="text-center text-3xl font-semibold  text-purple-600 ">CRAFT ITEMS</p>
+            <p className="text-center text-3xl font-semibold  text-purple-600 ">Craft Items</p>
             <p className="text-center text-lg     "> Explore the Craft Items Collection, find exclusive something...</p>
                 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5   container mx-auto">
                     {
                         crafts.map(craft => <CraftCard
                         key={craft._id}
