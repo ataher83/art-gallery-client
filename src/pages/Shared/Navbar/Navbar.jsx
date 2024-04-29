@@ -3,9 +3,18 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
+// import React from 'react'
+import { useTypewriter } from 'react-simple-typewriter'
+
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext); 
+
+    const [text] = useTypewriter({
+        words: ['The Art Gallery', 'The Art Gallery', 'The Art Gallery'],
+        // words: ['The', 'The Art', 'The Art Gallery'],
+        loop: 0
+      })
 
 
     const [theme, setTheme] = useState('light')
@@ -63,7 +72,7 @@ const Navbar = () => {
 
                 </ul>
                 </div>
-                <a className="text-3xl font-bold text-purple-600" href="/">The Art Gallery</a>
+                <a className="text-3xl font-bold text-purple-600" href="/"><span>{text}</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -142,6 +151,8 @@ const Navbar = () => {
                 </svg>
                 </label>
             </div>
+
+
 
         </div>
     );
