@@ -11,7 +11,7 @@ const LocationMap = () => {
                     <h1>Find our Location</h1>
                 </Slide>
             </p>
-            <p className="text-center text-lg "> 
+            <p className="text-center text-lg hidden md:block "> 
                     <Fade delay={1e3} cascade damping={1e-1}> Find our location on the map that help you to explore us easily </Fade>
             </p>
             <MapContainer className='h-64 w-full'
