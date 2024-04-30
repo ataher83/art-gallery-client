@@ -159,7 +159,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">User Email</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="userEmail" defaultValue={userEmail} placeholder="User Email" className="input input-bordered w-full" />
+                                <input type="text" name="userEmail" defaultValue={userEmail} disabled placeholder="User Email" className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -168,7 +168,7 @@ const UpdateCraft = () => {
                                 <span className="label-text">User Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="userName" defaultValue={userName} placeholder="User Name" className="input input-bordered w-full" />
+                                <input type="text" name="userName" defaultValue={userName} disabled placeholder="User Name" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>

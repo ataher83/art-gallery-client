@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import Users from '../../pages/Users/Users';
 import AllArtAndCraftItems from '../../pages/AllArtAndCraftItems/AllArtAndCraftItems';
 import { Link } from 'react-router-dom';
@@ -7,20 +7,20 @@ import { FcRating } from "react-icons/fc";
 
 const ViewDetails = () => {
  
-const [users, setUsers] = useState([])
-const [crafts, setCrafts] = useState([])
+    const [users, setUsers] = useState([])
+    const [crafts, setCrafts] = useState([])
 
-useEffect(()=>{
-    fetch('https://art-gallery-server-one.vercel.app/user')
-            .then(res => res.json())
-            .then(data => setUsers(data))
-}, [])
+    useEffect(()=>{
+        fetch('https://art-gallery-server-one.vercel.app/user')
+                .then(res => res.json())
+                .then(data => setUsers(data))
+    }, [])
 
-useEffect(()=>{
-    fetch('https://art-gallery-server-one.vercel.app/craft')
-            .then(res => res.json())
-            .then(data => setCrafts(data))
-}, [])
+    useEffect(()=>{
+        fetch('https://art-gallery-server-one.vercel.app/craft')
+                .then(res => res.json())
+                .then(data => setCrafts(data))
+    }, [])
 
 
     //  fetch('https://art-gallery-server-one.vercel.app/user')
@@ -41,9 +41,6 @@ useEffect(()=>{
     return (
         <div>
             <h1 className='text-2xl font-semibold text-center text-violet-500 py-5'>View Details Information</h1>
-            {/* <p>{users.length}</p> */}
-            {/* <p>{crafts.length}</p> */}
-        
 
 
 
@@ -59,7 +56,7 @@ useEffect(()=>{
                             {/* head */}
                             <thead>
                             <tr>
-                                {/* <th></th> */}
+                                <th>User Name</th>
                                 <th>Email</th>
                                 <th>Created At</th>
                                 <th>Last Logged In</th>
@@ -72,6 +69,7 @@ useEffect(()=>{
                             {
                                 users.map(user => <tr key={user._id}>
                                     {/* <th>1</th> */}
+                                    <td>{user.userName}</td>
                                     <td>{user.email}</td>
                                     <td>{user.createdAt}</td>
                                     <td>{user.lastLoggedAt}</td>
@@ -86,11 +84,7 @@ useEffect(()=>{
                         </table>
                     </div>
                 </div>    
-                
-  
             </div>
-
-
 
 
 

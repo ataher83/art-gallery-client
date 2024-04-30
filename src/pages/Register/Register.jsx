@@ -10,11 +10,13 @@ import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
-    const { createUser, logOut } = useContext(AuthContext);
+    const { user, createUser, logOut } = useContext(AuthContext);
 
     const [regError, setRegError] = useState(''); 
     const [success, setSuccess] = useState(''); 
     const [showPassword, setShowPassword] = useState(false); 
+
+    // const userName = user.displayName;
 
     const handleRegister = e => {
         e.preventDefault(); 
@@ -66,8 +68,12 @@ const Register = () => {
                 toast.success('User Created Successfully.');
                 //new user has been create
 
+
                 const createdAt = result.user?.metadata?.creationTime;
-                const user = { email, createdAt: createdAt }; 
+                const userName = name;
+                // const userName = result.user?.auth?.displayName;
+                const user = { userName, email, createdAt: createdAt };  
+                // const user = { userName, email, createdAt: createdAt };  
                 fetch('https://art-gallery-server-one.vercel.app/user', {
                     method: 'POST',
                     headers: {

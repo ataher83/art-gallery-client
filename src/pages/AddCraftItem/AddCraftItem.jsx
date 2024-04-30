@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const AddCraftItem = () => {
+    const { user } = useContext(AuthContext); 
+
     const handleAddCraftItem = event => {
         event.preventDefault();
 
@@ -81,14 +85,45 @@ const AddCraftItem = () => {
                             </label>
                         </div>
 
+
                         <div className="form-control md:w-1/2 ml-4">
+
                             <label className="label">
                                 <span className="label-text">Subcategory Name</span>
                             </label>
-                            <label className="input-group">
-                                <input type="text" name="subcategoryName" placeholder="Subcategory Name" className="input input-bordered w-full" />
-                            </label>
+                            
+                            <select className="h-12 border-black border rounded-lg w-full " name="subcategoryName" id="t">
+                                <option value="">-- Select a Subcategory Name --</option>
+                                <option value="LandscapePainting">Landscape Painting</option>
+                                <option value="PortraitDrawing">Portrait Drawing</option>
+                                <option value="WatercolourPainting">Watercolour Painting</option>
+                                <option value="OilPainting">Oil Painting</option>
+                                <option value="CharcoalSketching">Charcoal Sketching</option>
+                                <option value="CartoonDrawing">Cartoon Drawing</option>
+                            </select>
+                        
                         </div>
+
+
+                        {/* <div className="form-control md:w-1/2 ml-4">
+                            <label className="label">
+                                <span className="label-text">Subcategory Name</span>
+                            </label>
+
+
+
+
+                            <label className="input-group">
+
+
+                                <input type="text" name="subcategoryName" placeholder="Subcategory Name" className="input input-bordered w-full" />
+
+
+                            </label>
+                        </div> */}
+
+
+
                     </div>
 
                     {/* short description & price */}
@@ -128,7 +163,7 @@ const AddCraftItem = () => {
                                 <span className="label-text">Customization</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="customization" placeholder="example- yes/ no" className="input input-bordered w-full" />
+                                <input type="text" name="customization" placeholder="example- Yes/ No" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -161,7 +196,7 @@ const AddCraftItem = () => {
                                 <span className="label-text">User Email</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="userEmail" placeholder="User Email" className="input input-bordered w-full" />
+                                <input type="text" name="userEmail" placeholder="User Email" defaultValue={user.email} disabled className="input input-bordered w-full" />
                             </label>
                         </div>
 
@@ -170,7 +205,7 @@ const AddCraftItem = () => {
                                 <span className="label-text">User Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="userName" placeholder="User Name" className="input input-bordered w-full" />
+                                <input type="text" name="userName" placeholder="User Name" defaultValue={user.displayName} disabled className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
