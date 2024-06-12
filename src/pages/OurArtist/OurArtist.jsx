@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { Fade, Slide } from "react-awesome-reveal";
 
 const OurArtist = () => {
     return (
         <div className="flex gap-5  container mx-auto">
-            <Helmet>
-                <title>The Art Gallery | Our Artists</title>
-            </Helmet>
+            
 
             <div className="py-16 container mx-auto ">
                 <p className="text-center text-3xl font-semibold  text-purple-600   ">

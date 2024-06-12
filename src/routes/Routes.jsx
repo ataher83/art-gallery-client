@@ -12,6 +12,7 @@ import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
 import Users from "../pages/Users/Users";
 import CraftDetails from "../pages/CraftDetails/CraftDetails";
 import ViewDetails from "./ViewDetails/ViewDetails";
+import ArtAndCraftCategories from "../pages/ArtAndCraftCategories/ArtAndCraftCategories";
 
 
   const router = createBrowserRouter([
@@ -30,6 +31,11 @@ import ViewDetails from "./ViewDetails/ViewDetails";
             path:'/allArtAndCraftItems',
             element: <AllArtAndCraftItems></AllArtAndCraftItems>,
             loader: () => fetch('https://art-gallery-server-one.vercel.app/craft')
+        },
+        {
+            path:'/artAndCraftCategories',   
+            element: <ArtAndCraftCategories></ArtAndCraftCategories>,
+            loader: () => fetch('https://art-gallery-server-one.vercel.app/catagories')
         },
         {
             path:'/addCraftItem',

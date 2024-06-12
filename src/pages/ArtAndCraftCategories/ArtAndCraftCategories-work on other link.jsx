@@ -1,15 +1,9 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
+const ArtAndCraftCategories = () => {
+    const categoryCrafts = useLoaderData()
 
-const AllArtAndCraftItems = () => {
-    const crafts = useLoaderData()
-
-
-
-
-
-    
 
 
     return (
@@ -23,7 +17,7 @@ const AllArtAndCraftItems = () => {
             <div className="overflow-x-auto">
                 <table className="table">
                     {
-                        crafts.map(craft => 
+                        categoryCrafts.map(categoryCraft => 
                             <div>
                                 <tbody>
                                     <tr>
@@ -31,19 +25,19 @@ const AllArtAndCraftItems = () => {
                                         <div className="md:flex items-center gap-3">
                                             <div className="avatar">
                                             <div className="rounded-md w-20 lg:w-72 lg:h-40">
-                                                <img src={craft.image} alt="Craft Image" />
+                                                <img src={categoryCraft.image} alt="Craft Image" />
                                             </div>
                                             </div>
                                             <div>
-                                            <div className="font-bold">{(craft.itemName).slice(0, 20)}</div>
-                                            <div className="text-sm opacity-50">{craft.subcategoryName}</div>
+                                            <div className="font-bold">{(categoryCraft.itemName).slice(0, 20)}</div>
+                                            <div className="text-sm opacity-50">{categoryCraft.subcategoryName}</div>
                                             </div>
                                         </div>
                                         </td>
                                         <td>
-                                        {(craft.shortDescription).slice(0, 60)}
+                                        {(categoryCraft.shortDescription).slice(0, 60)}
                                         </td>
-                                        <td>{craft.price}<span className="text-base text-slate-500 font-semibold">$</span></td>
+                                        <td>{categoryCraft.price}<span className="text-base text-slate-500 font-semibold">$</span></td>
                                         <th>
                                             <span>
                                                 <Link to="/viewDetails">
@@ -70,4 +64,4 @@ const AllArtAndCraftItems = () => {
     );
 };
 
-export default AllArtAndCraftItems;
+export default ArtAndCraftCategories;
